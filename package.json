@@ -12,6 +12,8 @@
     "stylelint:fix": "stylelint 'src/**/*.{css,scss}' --fix",
     "type-check": "tsc --noEmit",
     "format": "prettier --write .",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "prepare": "husky"
   },
   "dependencies": {
@@ -24,6 +26,7 @@
     "@testing-library/dom": "10.4.0",
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.1.0",
+    "@types/jest": "29.5.14",
     "@types/node": "20.17.10",
     "@types/react": "19.0.0",
     "@types/react-dom": "19.0.0",
