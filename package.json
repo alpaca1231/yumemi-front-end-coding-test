@@ -10,7 +10,8 @@
     "lint:fix": "next lint --fix",
     "stylelint": "stylelint 'src/**/*.{css,scss}'",
     "stylelint:fix": "stylelint 'src/**/*.{css,scss}' --fix",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
   "dependencies": {
     "next": "15.1.2",
@@ -25,6 +26,8 @@
     "eslint": "9.17.0",
     "eslint-config-next": "15.1.2",
     "eslint-config-prettier": "^9.1.0",
+    "husky": "9.1.7",
+    "lint-staged": "15.2.11",
     "prettier": "3.4.2",
     "stylelint": "16.12.0",
     "stylelint-config-recess-order": "^5.1.1",
