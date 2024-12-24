@@ -10,6 +10,7 @@
     "lint:fix": "next lint --fix",
     "stylelint": "stylelint 'src/**/*.{css,scss}'",
     "stylelint:fix": "stylelint 'src/**/*.{css,scss}' --fix",
+    "type-check": "tsc --noEmit",
     "format": "prettier --write .",
     "prepare": "husky"
   },

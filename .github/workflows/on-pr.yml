@@ -1,0 +1,29 @@
+name: on-pr
+on: pull_request
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9.5.0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version'
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
+      - name: type-check
+        run: pnpm type-check
+      - name: lint
+        run: pnpm lint --max-warnings=0
+      - name: stylelint
+        run: pnpm stylelint
+
+  # TODO: Testを追加する
