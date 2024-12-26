@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url';
 
 import { FlatCompat } from '@eslint/eslintrc';
 import eslintConfigPrettier from 'eslint-config-prettier';
+import storybookPlugin from 'eslint-plugin-storybook';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -17,7 +18,9 @@ const eslintConfig = [
     ignores: ['dist', '.next'],
   },
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  ...storybookPlugin.configs['flat/recommended'],
   {
+    files: ['**/*.{js,jsx,ts,tsx}'],
     rules: {
       complexity: ['error', { max: 10 }], // 複雑度を10に制限
       // 行数を制限
@@ -83,11 +86,11 @@ const eslintConfig = [
     /*
      * 以下のファイルは default export を許可
      * - /app配下のpage, layout
-     * - config.js などの設定ファイル
+     * - .storybook 配下のファイル
      */
     files: [
       'src/app/**/{page,layout}.{js,jsx,ts,tsx}',
-      '**.config.{js,mjs,cjs,ts}',
+      '.storybook/**/*.{js,jsx,ts,tsx}',
     ],
     rules: {
       'import/no-default-export': 'off',
