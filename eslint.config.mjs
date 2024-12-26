@@ -93,6 +93,15 @@ const eslintConfig = [
       'import/no-default-export': 'off',
     },
   },
+  {
+    // test ファイルでは特定のルールを無効化
+    files: ['**/*.test.{js,jsx,ts,tsx}', '**/*.spec.{js,jsx,ts,tsx}'],
+    rules: {
+      'max-lines': 'off',
+      'max-lines-per-function': 'off',
+      complexity: 'off',
+    },
+  },
   eslintConfigPrettier,
 ];
 
