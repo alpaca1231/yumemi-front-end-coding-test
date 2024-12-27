@@ -1,0 +1,12 @@
+.openapi-generator-ignore
+apis/DefaultApi.ts
+apis/index.ts
+index.ts
+models/PopulationCompositionPerYear.ts
+models/PopulationCompositionPerYearDataInner.ts
+models/PopulationCompositionPerYearDataInnerDataInner.ts
+models/PopulationCompositionPerYearResponse.ts
+models/Prefecture.ts
+models/PrefecturesResponse.ts
+models/index.ts
+runtime.ts
