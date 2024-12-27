@@ -17,9 +17,11 @@
     "test:watch": "jest --watch",
     "test:e2e": "playwright test",
     "storybook": "storybook dev -p 6006",
+    "generate": "scaffdog generate component",
     "prepare": "husky"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "next": "15.1.2",
     "react": "19.0.0",
     "react-dom": "19.0.0"
@@ -51,6 +53,8 @@
     "jest-environment-jsdom": "29.7.0",
     "lint-staged": "15.2.11",
     "prettier": "3.4.2",
+    "prettier-plugin-scaffdog": "^4.1.0",
+    "scaffdog": "^4.1.0",
     "storybook": "^8.4.7",
     "stylelint": "16.12.0",
     "stylelint-config-recess-order": "^5.1.1",
