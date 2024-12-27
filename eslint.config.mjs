@@ -87,10 +87,12 @@ const eslintConfig = [
      * 以下のファイルは default export を許可
      * - /app配下のpage, layout
      * - .storybook 配下のファイル
+     * - .scaffdog 配下のファイル
      */
     files: [
       'src/app/**/{page,layout}.{js,jsx,ts,tsx}',
       '.storybook/**/*.{js,jsx,ts,tsx}',
+      '.scaffdog/**/*.{js,jsx,ts,tsx}',
     ],
     rules: {
       'import/no-default-export': 'off',
