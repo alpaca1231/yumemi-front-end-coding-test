@@ -17,9 +17,11 @@
     "test:watch": "jest --watch",
     "test:e2e": "playwright test",
     "storybook": "storybook dev -p 6006",
+    "generate": "scaffdog generate component",
     "prepare": "husky"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "next": "15.1.2",
     "react": "19.0.0",
     "react-dom": "19.0.0"
