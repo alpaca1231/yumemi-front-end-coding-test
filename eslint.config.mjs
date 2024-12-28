@@ -4,6 +4,8 @@ import { fileURLToPath } from 'url';
 import { FlatCompat } from '@eslint/eslintrc';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import storybookPlugin from 'eslint-plugin-storybook';
+import jestPlugin from 'eslint-plugin-jest';
+import unusedImportsPlugin from 'eslint-plugin-unused-imports';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -20,7 +22,13 @@ const eslintConfig = [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   ...storybookPlugin.configs['flat/recommended'],
   {
+    linterOptions: {
+      reportUnusedDisableDirectives: 'error', // 無効化コメントが未使用の場合はエラー
+    },
+  },
+  {
     files: ['**/*.{js,jsx,ts,tsx}'],
+    plugins: { 'unused-imports': unusedImportsPlugin },
     rules: {
       complexity: ['error', { max: 10 }], // 複雑度を10に制限
       // 行数を制限
@@ -71,6 +79,18 @@ const eslintConfig = [
           pathGroupsExcludedImportTypes: ['builtin'],
         },
       ],
+      'unused-imports/no-unused-imports': 'error', // import が未使用の場合はエラー
+      '@typescript-eslint/no-unused-vars': 'off', // TypeScript の未使用変数チェックを無効化
+      'unused-imports/no-unused-vars': [
+        'warn',
+        {
+          vars: 'all',
+          varsIgnorePattern: '^_',
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+        },
+      ],
+      '@typescript-eslint/consistent-type-imports': 'error', // 型定義はimport typeに統一
 
       // eslint-plugin-react の追加ルール
       'react/destructuring-assignment': 'error', // propsの分割代入を強制
@@ -102,9 +122,19 @@ const eslintConfig = [
     },
   },
   {
-    // test ファイルでは特定のルールを無効化
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/*.spec.{js,jsx,ts,tsx}'],
+    plugins: { jest: jestPlugin },
+    languageOptions: {
+      globals: jestPlugin.environments.globals.globals,
+    },
     rules: {
+      'jest/no-disabled-tests': 'warn',
+      'jest/no-focused-tests': 'error',
+      'jest/no-identical-title': 'error',
+      'jest/prefer-to-have-length': 'warn',
+      'jest/valid-expect': 'error',
+
+      // 一部のルールを無効化
       'max-lines': 'off',
       'max-lines-per-function': 'off',
       complexity: 'off',
