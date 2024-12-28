@@ -31,7 +31,9 @@ jobs:
       - name: lint
         run: pnpm lint --max-warnings=0
       - name: stylelint
-        run: pnpm stylelint "src/**/*.{css,scss}"
+        run: pnpm lint:style
+      - name: package.json lint
+        run: pnpm lint:pkg
 
   test:
     runs-on: ubuntu-latest
