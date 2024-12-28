@@ -22,6 +22,11 @@ const eslintConfig = [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   ...storybookPlugin.configs['flat/recommended'],
   {
+    linterOptions: {
+      reportUnusedDisableDirectives: 'error', // 無効化コメントが未使用の場合はエラー
+    },
+  },
+  {
     files: ['**/*.{js,jsx,ts,tsx}'],
     plugins: { 'unused-imports': unusedImportsPlugin },
     rules: {
@@ -85,6 +90,7 @@ const eslintConfig = [
           argsIgnorePattern: '^_',
         },
       ],
+      '@typescript-eslint/consistent-type-imports': 'error', // 型定義はimport typeに統一
 
       // eslint-plugin-react の追加ルール
       'react/destructuring-assignment': 'error', // propsの分割代入を強制
