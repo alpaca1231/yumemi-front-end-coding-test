@@ -10,6 +10,7 @@
     "lint": "next lint",
     "lint:style": "stylelint 'src/**/*.{css,scss}'",
     "lint:pkg": "npmPkgJsonLint .",
+    "lint:fix": "next lint --fix && stylelint 'src/**/*.{css,scss}' --fix && npmPkgJsonLint . && prettier --write .",
     "type-check": "tsc --noEmit",
     "format": "prettier --write .",
     "test": "jest",

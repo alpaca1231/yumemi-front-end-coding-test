@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ゆめみ フロントエンドコーディング試験
 
-## Getting Started
+![Vercel Deploy](https://deploy-badge.vercel.app/vercel/yumemi-front-end-coding-test?style=for-the-badge)
 
-First, run the development server:
+This was created based on the following source: [フロントエンドコーディング試験](https://yumemi.notion.site/0e9ef27b55704d7882aab55cc86c999d)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech Stack
+
+| stack      | version |
+| ---------- | ------- |
+| Next.js    | 15.1.2  |
+| React      | 19.0.0  |
+| Typescript | 5.7.2   |
+| Recharts   | 2.15.0  |
+| Storybook  | 8.4.7   |
+
+[read more...](./package.json)
+
+## Setup
+
+> [!NOTE]
+> 下記コマンドを実行するには `.node-version` に記載されたバージョンの Node.js が必要です。
+
+**依存関係のインストール**
+
+```sh
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**環境変数の設定**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+cp .env.local.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**ローカル環境の起動**
 
-## Learn More
+```sh
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+**Storybookの起動**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+pnpm storybook
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**build**
 
-## Deploy on Vercel
+```sh
+pnpm build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**コンポーネント作成時**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```sh
+pnpm generate
+```
