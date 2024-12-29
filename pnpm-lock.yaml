@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@acab/reset.css':
+        specifier: 0.11.0
+        version: 0.11.0
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -143,6 +146,9 @@ importers:
         version: 5.7.2
 
 packages:
+
+  '@acab/reset.css@0.11.0':
+    resolution: {integrity: sha512-m9p/vUDxzXd8u0EYwHNKZOmjEY4DQHPq7H4/7EbZuxzTQ/KtVtc1sfhwoOBBpG3QtTNIL9FBX5wQ8xhrjfimog==}
 
   '@adobe/css-tools@4.4.1':
     resolution: {integrity: sha512-12WGKBQzjUAI4ayyF4IAtfw2QR/IDoqk6jTddXDhtYTJF9ASmoE1zst7cVtP0aL/F1jUJL5r+JxKXKEgHNbEUQ==}
@@ -6183,6 +6189,8 @@ packages:
     resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
 
 snapshots:
+
+  '@acab/reset.css@0.11.0': {}
 
   '@adobe/css-tools@4.4.1': {}
 
