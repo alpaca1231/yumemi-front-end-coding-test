@@ -1,7 +1,8 @@
 # ゆめみ フロントエンドコーディング試験
 
-[![Vercel Deploy](https://deploy-badge.vercel.app/vercel/yumemi-front-end-coding-test?style=for-the-badge)](https://yumemi-front-end-coding-test.vercel.app/)
+[![Vercel Deploy](https://deploy-badge.vercel.app/vercel/yumemi-front-end-coding-test)](https://yumemi-front-end-coding-test.vercel.app/)
 [![storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg)](https://main--676f8a2eefba37fca3dea243.chromatic.com)
+[![codecov](https://codecov.io/github/alpaca1231/yumemi-front-end-coding-test/graph/badge.svg?token=COZH4M5YNL)](https://codecov.io/github/alpaca1231/yumemi-front-end-coding-test)
 
 This was created based on the following source: [フロントエンドコーディング試験](https://yumemi.notion.site/0e9ef27b55704d7882aab55cc86c999d)
 
