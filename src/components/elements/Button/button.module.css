@@ -11,14 +11,6 @@
   transition: background-color 0.2s ease;
 }
 
-.base:focus-visible {
-  --ring-offset: 0.125rem;
-
-  box-shadow:
-    0 0 0 var(--ring-offset) var(--background),
-    0 0 0 calc(0.25rem + var(--ring-offset)) var(--ring);
-}
-
 .default {
   color: var(--foreground);
   background-color: var(--background);

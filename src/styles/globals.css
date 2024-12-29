@@ -40,6 +40,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:where(:focus-visible) {
+  --ring-offset: 0.25rem;
+
+  outline: none;
+  outline-offset: 0;
+  box-shadow:
+    0 0 0 var(--ring-offset) var(--background),
+    0 0 0 calc(0.25rem + var(--ring-offset)) var(--ring);
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
