@@ -12,7 +12,7 @@ questions:
 # `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.tsx`
 
 ```tsx
-import { FC } from 'react';
+import type { FC } from 'react';
 
 import { clsx } from 'clsx';
 
@@ -77,7 +77,7 @@ export const Default: Story = {
 # `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.test.tsx`
 
 ```tsx
-import { ComponentProps } from 'react';
+import type { ComponentProps } from 'react';
 
 import { render, screen } from '@testing-library/react';
 

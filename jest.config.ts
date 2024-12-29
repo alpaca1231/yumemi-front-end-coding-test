@@ -20,7 +20,7 @@ const config: Config = {
     'src/**/*.{ts,tsx,js,jsx}',
     '!src/**/*.d.ts',
     '!src/**/*/index.ts',
-    '!src/**/*.stories.ts',
+    '!src/**/*.stories.tsx',
     '!src/shared/**/*',
   ],
 };
