@@ -53,7 +53,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { {{ inputs.name | pascal }} } from './{{ inputs.name | pascal }}';
 
 const meta = {
-  title: '{{ output.dir | camel }}/{{ inputs.name | pascal }}',
+  title: 'Components/{{ inputs.name | pascal }}',
   component: {{ inputs.name | pascal }},
   parameters: {
     layout: 'centered',
