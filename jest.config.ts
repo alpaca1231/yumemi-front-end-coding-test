@@ -21,6 +21,7 @@ const config: Config = {
     '!src/**/*.d.ts',
     '!src/**/*/index.ts',
     '!src/**/*.stories.ts',
+    '!src/shared/**/*',
   ],
 };
 
