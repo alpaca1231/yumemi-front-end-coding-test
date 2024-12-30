@@ -84,6 +84,10 @@ describe('Tabs コンポーネント', () => {
     // End キーで最後のタブに移動
     await userEvent.keyboard('{End}');
     expect(thirdPanel).toBeVisible();
+
+    // 指定していないキーは無視される
+    await userEvent.keyboard('A');
+    expect(thirdPanel).toBeVisible();
   });
 
   it('Enterキーを押すとコンテンツが切り替わる', async () => {
