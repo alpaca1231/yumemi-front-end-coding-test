@@ -1,0 +1,17 @@
+.tabList {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.tabButton[aria-selected='true'] {
+  font-weight: bold;
+}
+
+.tabButton[aria-selected='true']:hover {
+  color: var(--primary-foreground);
+  cursor: not-allowed;
+  background-color: var(--primary);
+}
