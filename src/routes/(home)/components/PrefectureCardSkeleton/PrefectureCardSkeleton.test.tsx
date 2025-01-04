@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import { PrefectureCardSkeleton } from '@/components/routes/(home)/components/PrefectureCardSkeleton/PrefectureCardSkeleton';
+import { PrefectureCardSkeleton } from '@/routes/(home)/components/PrefectureCardSkeleton/PrefectureCardSkeleton';
 
 describe('PrefectureCardSkeleton component', () => {
   it('正しくレンダリングされる', () => {
