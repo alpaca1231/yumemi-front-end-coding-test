@@ -1,0 +1,11 @@
+.wrapper {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.copyright {
+  font-size: 0.75rem;
+}
