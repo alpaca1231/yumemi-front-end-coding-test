@@ -18,6 +18,7 @@ const config: Config = {
   coverageReporters: ['text', 'lcov'],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx,js,jsx}',
+    '!src/app/**/{page,layout}.{ts,tsx,js,jsx}*',
     '!src/**/*.d.ts',
     '!src/**/*/index.ts',
     '!src/**/*.stories.tsx',
