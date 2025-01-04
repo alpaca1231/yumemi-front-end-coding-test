@@ -9,6 +9,9 @@
   --accent-foreground: #060607;
   --border: #c7d1df;
   --ring: #2f5fac;
+  --skeleton-light: #e3e8ee;
+  --skeleton-dark: #d0d7df;
+  --skeleton-highlight: #f4f7fa;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,6 +26,9 @@
     --accent-foreground: #f7f9fb;
     --border: #c7d1df;
     --ring: #268bd2;
+    --skeleton-light: #4a4f54;
+    --skeleton-dark: #3a3f44;
+    --skeleton-highlight: #5a5f64;
   }
 }
 
