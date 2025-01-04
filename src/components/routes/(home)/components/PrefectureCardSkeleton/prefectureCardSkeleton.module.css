@@ -1,0 +1,21 @@
+.skeleton {
+  width: 100%;
+  height: 1.25rem;
+  background-color: var(--skeleton-highlight);
+  border-radius: 0.25rem;
+  animation: skeleton 2s infinite ease-in-out;
+}
+
+@keyframes skeleton {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
