@@ -2,13 +2,13 @@ import type { FC } from 'react';
 
 import { clsx } from 'clsx';
 
-import styles from './prefectureCardSkeleton.module.css';
+import styles from './prefectureSkeleton.module.css';
 
 type PrefectureCardSkeletonProps = {
   className?: string;
 };
 
-export const PrefectureCardSkeleton: FC<PrefectureCardSkeletonProps> = ({
+export const PrefectureSkeleton: FC<PrefectureCardSkeletonProps> = ({
   className,
 }) => {
   return (
