@@ -7,9 +7,6 @@ import type { PopulationCompositionPerYearResponse } from '@/api/population/comp
 export const fetchPopulationCompositionPerYear = async (
   prefCode: number,
 ): Promise<PopulationCompositionPerYearResponse> => {
-  if (!prefCode) {
-    throw new Error('prefCode is required');
-  }
   try {
     const res = await api.apiV1PopulationCompositionPerYearGet(
       {
