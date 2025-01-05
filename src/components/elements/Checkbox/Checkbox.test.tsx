@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 
 import { Checkbox } from './Checkbox';
 
-describe('Checkbox コンポーネント', () => {
+describe('Checkbox component', () => {
   const defaultProps = {
     id: 'checkbox-id',
     label: 'checkbox',

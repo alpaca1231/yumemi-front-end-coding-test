@@ -49,7 +49,7 @@ jest.mock(
   }),
 );
 
-describe('PopulationGraphContainer', () => {
+describe('PopulationGraphContainer  component', () => {
   it('チェックされた都道府県がない場合、nullを返す', async () => {
     const result = await PopulationGraphContainer({
       checkedPrefectures: [],

@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { PrefectureSkeleton } from '@/routes/(home)/components/PrefectureSkeleton/PrefectureSkeleton';
 import { PrefectureSkeletonList } from '@/routes/(home)/components/PrefectureSkeleton/PrefectureSkeletonList';
 
-describe('PrefectureSkeleton', () => {
+describe('PrefectureSkeleton component', () => {
   it('PrefectureSkeleton: 正しくレンダリングされる', () => {
     render(<PrefectureSkeleton />);
     const prefectureSkeleton = screen.getByRole('status');
