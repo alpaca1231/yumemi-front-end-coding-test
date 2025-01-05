@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 
 import { fetchPrefectures } from '@/api/prefectures/services';
+import { GraphSkeleton } from '@/routes/(home)/components/GraphSkeleton';
 import { PopulationGraph } from '@/routes/(home)/components/PopulationGraph';
 import { PrefectureList } from '@/routes/(home)/components/PrefectureList';
 import { PrefectureSkeletonList } from '@/routes/(home)/components/PrefectureSkeleton';
@@ -27,7 +28,15 @@ export default async function Home({ searchParams }: HomeProps) {
           prefectures={prefectures}
         />
       </Suspense>
-      <PopulationGraph checkedPrefectures={checkedPrefectures} />
+      <div className={styles.graphContainer}>
+        <Suspense fallback={<GraphSkeleton />}>
+          {checkedPrefectures.length === 0 ? (
+            <p className={styles.noData}>都道府県を選択してください</p>
+          ) : (
+            <PopulationGraph checkedPrefectures={checkedPrefectures} />
+          )}
+        </Suspense>
+      </div>
     </div>
   );
 }
