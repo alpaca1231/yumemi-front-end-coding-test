@@ -19,10 +19,12 @@ const config: Config = {
   collectCoverageFrom: [
     'src/**/*.{ts,tsx,js,jsx}',
     '!src/app/**/{page,layout}.{ts,tsx,js,jsx}*',
+    '!src/**/types.ts',
     '!src/**/*.d.ts',
     '!src/**/*/index.ts',
     '!src/**/*.stories.tsx',
     '!src/shared/**/*',
+    '!src/api/**/client.ts',
   ],
 };
 
