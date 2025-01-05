@@ -2,7 +2,6 @@
 
 import type { FC } from 'react';
 
-import clsx from 'clsx';
 import {
   CartesianGrid,
   Label,
@@ -19,8 +18,6 @@ import type { Prefecture } from '@/api/prefectures/types';
 import { Tabs } from '@/components/elements/Tabs';
 import type { FormattedCategorizedData } from '@/routes/(home)/utils/formatPopulationComposition';
 import { getColorByIndex } from '@/routes/(home)/utils/getColorByIndex';
-
-import styles from './populationGraph.module.css';
 
 type PopulationGraphPresenterProps = {
   prefectures: Prefecture[];
@@ -78,9 +75,5 @@ export const PopulationGraphPresenter: FC<PopulationGraphPresenterProps> = ({
     ),
   }));
 
-  return (
-    <div className={clsx(styles.wrapper, className)}>
-      <Tabs className={className} tabs={tabs} />
-    </div>
-  );
+  return <Tabs className={className} tabs={tabs} />;
 };
