@@ -1,5 +1,25 @@
 .wrapper {
   max-width: 1024px;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   margin: 0 auto;
+}
+
+.graphContainer {
+  padding: 1rem 0;
+}
+
+.noData {
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@media (width >= 768px) {
+  .wrapper {
+    padding: 1rem 2rem;
+  }
+
+  .graphContainer {
+    padding: 2rem 1rem;
+  }
 }
