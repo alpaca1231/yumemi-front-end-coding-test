@@ -1,5 +1,8 @@
+import { Suspense } from 'react';
+
 import { fetchPrefectures } from '@/api/prefectures/services';
 import { PrefectureList } from '@/routes/(home)/components/PrefectureList';
+import { PrefectureSkeletonList } from '@/routes/(home)/components/PrefectureSkeleton';
 
 import styles from './page.module.css';
 
@@ -13,7 +16,9 @@ export default async function Home() {
   const prefectures = await fetchPrefectures();
   return (
     <div className={styles.wrapper}>
-      <PrefectureList prefectures={prefectures} />
+      <Suspense fallback={<PrefectureSkeletonList />}>
+        <PrefectureList prefectures={prefectures} />
+      </Suspense>
     </div>
   );
 }
