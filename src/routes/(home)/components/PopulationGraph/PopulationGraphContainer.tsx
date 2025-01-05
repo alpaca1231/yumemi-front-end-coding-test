@@ -13,6 +13,10 @@ type PopulationGraphContainerProps = {
 export const PopulationGraphContainer: FC<
   PopulationGraphContainerProps
 > = async ({ checkedPrefectures, className }) => {
+  if (checkedPrefectures.length === 0) {
+    return null;
+  }
+
   const prefecturalYearlyPopulationData = await Promise.all(
     checkedPrefectures.map(async ({ prefCode, prefName }) => {
       const res = await fetchPopulationCompositionPerYear(prefCode);
