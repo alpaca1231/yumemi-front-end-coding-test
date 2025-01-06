@@ -1,7 +1,7 @@
 import { handleApiError } from '@/api/helpers/errorHandler';
 
 describe('handleApiError', () => {
-  test('Error インスタンスからのメッセージを使用して新しいエラーをthrowする', () => {
+  it('Error インスタンスからのメッセージを使用して新しいエラーをthrowする', () => {
     const error = new Error('Error message');
 
     expect(() => handleApiError(error)).toThrow(
@@ -9,13 +9,13 @@ describe('handleApiError', () => {
     );
   });
 
-  test('未知のエラータイプに対して汎用的なエラーメッセージをthrowする', () => {
+  it('未知のエラータイプに対して汎用的なエラーメッセージをthrowする', () => {
     const error = { unexpected: true };
 
     expect(() => handleApiError(error)).toThrow('An unexpected error occurred');
   });
 
-  test('undefined や null のエラーを適切に処理する', () => {
+  it('undefined や null のエラーを適切に処理する', () => {
     expect(() => handleApiError(undefined)).toThrow(
       'An unexpected error occurred',
     );

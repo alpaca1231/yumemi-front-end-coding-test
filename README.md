@@ -10,7 +10,7 @@ This was created based on the following source: [フロントエンドコーデ�
 
 | stack      | version |
 | ---------- | ------- |
-| Next.js    | 15.1.2  |
+| Next.js    | 15.1.3  |
 | React      | 19.0.0  |
 | Typescript | 5.7.2   |
 | Recharts   | 2.15.0  |

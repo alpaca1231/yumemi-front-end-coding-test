@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 
 import { Button } from './Button';
 
-describe('Buttonコンポーネント', () => {
+describe('Button component', () => {
   it('propsを指定しない場合はdefaultスタイルが適用されたボタンが表示される', () => {
     render(<Button>Default Button</Button>);
     const button = screen.getByRole('button', { name: /default button/i });

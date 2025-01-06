@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 
 import { Checkbox } from './Checkbox';
 
-describe('Checkbox コンポーネント', () => {
+describe('Checkbox component', () => {
   const defaultProps = {
     id: 'checkbox-id',
     label: 'checkbox',
@@ -15,13 +15,13 @@ describe('Checkbox コンポーネント', () => {
     jest.clearAllMocks();
   });
 
-  test('正しいlabelで表示される', () => {
+  it('正しいlabelで表示される', () => {
     render(<Checkbox {...defaultProps} />);
     expect(screen.getByRole('checkbox')).toBeInTheDocument();
     expect(screen.getByLabelText('checkbox')).toBeInTheDocument();
   });
 
-  test('クリックされたときに onChange が呼び出される', async () => {
+  it('クリックされたときに onChange が呼び出される', async () => {
     render(<Checkbox {...defaultProps} />);
     const checkbox = screen.getByRole('checkbox');
 
@@ -29,7 +29,7 @@ describe('Checkbox コンポーネント', () => {
     expect(defaultProps.onChange).toHaveBeenCalledWith(true);
   });
 
-  test('disabled が適用される', () => {
+  it('disabled が適用される', () => {
     render(<Checkbox {...defaultProps} disabled />);
     const checkbox = screen.getByRole('checkbox');
     expect(checkbox).toBeDisabled();
@@ -37,7 +37,7 @@ describe('Checkbox コンポーネント', () => {
     expect(defaultProps.onChange).not.toHaveBeenCalled();
   });
 
-  test('checked が適用される', () => {
+  it('checked が適用される', () => {
     render(<Checkbox {...defaultProps} checked />);
     const checkbox = screen.getByRole('checkbox');
     expect(checkbox).toBeChecked();

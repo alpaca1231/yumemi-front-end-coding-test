@@ -23,7 +23,7 @@ describe('fetchPrefectures', () => {
     jest.clearAllMocks();
   });
 
-  test('API呼び出しが成功した場合、都道府県リストを返す', async () => {
+  it('API呼び出しが成功した場合、都道府県リストを返す', async () => {
     (api.apiV1PrefecturesGet as jest.Mock).mockResolvedValue({
       result: mockApiResponse,
     });
@@ -34,7 +34,7 @@ describe('fetchPrefectures', () => {
     expect(result).toEqual(mockApiResponse);
   });
 
-  test('API呼び出しが失敗した場合、handleApiErrorを呼び出し、空の配列を返す', async () => {
+  it('API呼び出しが失敗した場合、handleApiErrorを呼び出し、空の配列を返す', async () => {
     const mockError = new Error('API error');
     (api.apiV1PrefecturesGet as jest.Mock).mockRejectedValue(mockError);
 
